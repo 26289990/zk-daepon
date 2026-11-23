@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Set Argon as the initial LuCI theme. The package's post-install hook
+# is skipped while assembling a root filesystem, so set it on first boot.
+uci -q set luci.main.mediaurlbase='/luci-static/argon'
+uci -q set luci.themes.Argon='/luci-static/argon'
+uci -q commit luci
+
+exit 0
