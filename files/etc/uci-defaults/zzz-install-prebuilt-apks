@@ -18,10 +18,10 @@ set -- \
 	"$DIR"/v2ray-geoip-202610290022.1.apk \
 	"$DIR"/v2ray-geosite-202610302203.1.apk \
 	"$DIR"/daed-router-0.6.90-aarch64_cortex-a53.apk \
-	"$DIR"/luci-app-daed-router-0.6.90-service-control.apk
-	"$DIR"/luci-app-device-gateway_1.0.0-r1_all.apk
-	"$DIR"/25.12-gecoosac-2.2.20251015-r4-aarch64.apk
-    "$DIR"/25.12-luci-app-gecoosac-2.2-r4-aarch64.apk
+	"$DIR"/luci-app-daed-router-0.6.90-service-control.apk \
+	"$DIR"/luci-app-device-gateway_1.0.0-r1_all.apk \
+	"$DIR"/25.12-gecoosac-2.2.20251015-r4-aarch64.apk \
+    "$DIR"/25.12-luci-app-gecoosac-2.2-r4-aarch64.apk \
     "$DIR"/25.12-luci-i18n-gecoosac-zh-cn-26.221.82261-f10af17-aarch64.apk
 
 files=
