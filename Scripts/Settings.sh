@@ -2,6 +2,15 @@
 # SPDX-License-Identifier: MIT
 # Copyright (C) 2026 VIKINGYFY
 
+# 自定义文件（uci-defaults、rc.local、prebuilt-apks 等）
+if [ -d "$GITHUB_WORKSPACE/files" ]; then
+	echo "Copying custom files from $GITHUB_WORKSPACE/files ..."
+	mkdir -p ./files
+	cp -a "$GITHUB_WORKSPACE/files/." ./files/
+	echo "Custom files copied successfully!"
+	ls -la ./files/ || true
+fi
+
 #移除luci-app-attendedsysupgrade
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改默认主题
@@ -97,4 +106,3 @@ fi
 #调整网口顺序
 sed -i 's/ucidef_set_interface_lan "lan1 lan2 lan3 lan4"/ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "lan4"/g' target/linux/airoha/an7581/base-files/etc/board.d/02_network
 sed -i 's/interrupts.*//g' target/linux/airoha/dts/an7581-nokia_xg-040g-md-common.dtsi
-
