@@ -3,6 +3,7 @@
 
 (sleep 60; ip link set lan1 down; sleep 2; ip link set lan1 up) &
 (sleep 50; ip link set lan1 down; sleep 2; ip link set lan1 up) &
+(sleep 30; echo allow-untrusted > /etc/apk/config) &
 (while true; do sleep 3480; sync; echo 3 > /proc/sys/vm/drop_caches; done) &
 
 exit 0
