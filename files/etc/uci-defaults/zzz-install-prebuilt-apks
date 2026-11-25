@@ -23,7 +23,7 @@ set -- \
 	"$DIR"/25.12-gecoosac-2.2.20251015-r4-aarch64.apk \
     "$DIR"/25.12-luci-app-gecoosac-2.2-r4-aarch64.apk \
     "$DIR"/25.12-luci-i18n-gecoosac-zh-cn-26.221.82261-f10af17-aarch64.apk \
-	"$DIR"/minigate_2026.10.29-r1_all.apk
+	"$DIR"/minigate.apk
 
 files=
 for f in "$@"; do
